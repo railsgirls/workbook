@@ -6,6 +6,8 @@ deploy:
     secure: gMBpJi7JtUSost3W7kTO5jEYStqZhRuUsl/7uSwPCr9h4DICakoSx3wfdEhDNzrK9JafWxCZR2gk7NiyeG348Tgu5ZZq/ESxsfJgdV82ylXq941ncigBoaeg31vL1It9bMbcfPfQ+HnH2sHHb5fqq4wFz6cSkOVijG2GpnXIvCI=
   bucket: railsgirls-workbook
   local-dir: build
+  skip_cleanup: true
+  region: eu-central-1
   acl: public_read
   on:
     repo: railsgirls/workbook
