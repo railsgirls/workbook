@@ -1,0 +1,64 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style>
+    body {
+      text-rendering: geometricPrecision;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page {
+      background: red;
+      page-break-before: always;
+
+      -webkit-print-color-adjust: exact;
+
+    /*
+      width: 148mm;
+      height: 210mm;
+    */
+
+      width: 100%;
+      height: 100%;
+    }
+
+
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+
+    @page {
+      margin: 0;
+      size: 148mm 210mm;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="page">
+    Page
+  </div>
+  <div class="page">
+    Page
+  </div>
+  <div class="page">
+    Page
+  </div>
+  <div class="page">
+    Page
+  </div>
+  <div class="page">
+    Page
+  </div>
+  <div class="page">
+    Page
+  </div>
+  <div class="page">
+    Page
+  </div>
+</body>
+</html>
