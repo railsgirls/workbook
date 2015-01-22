@@ -10,7 +10,7 @@ namespace :build do
     options = {
       document_content: File.read('print.html'),
       name: 'workbook.pdf',
-      document_type: '..',
+      document_type: 'pdf',
       test: true
     }
 
