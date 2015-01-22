@@ -1,0 +1,14 @@
+language: ruby
+deploy:
+  provider: s3
+  access_key_id: AKIAJT6ZPTRVSYJDVQTQ
+  secret_access_key:
+    secure: gMBpJi7JtUSost3W7kTO5jEYStqZhRuUsl/7uSwPCr9h4DICakoSx3wfdEhDNzrK9JafWxCZR2gk7NiyeG348Tgu5ZZq/ESxsfJgdV82ylXq941ncigBoaeg31vL1It9bMbcfPfQ+HnH2sHHb5fqq4wFz6cSkOVijG2GpnXIvCI=
+  bucket: railsgirls-workbook
+  local-dir: build
+  acl: public_read
+  on:
+    repo: railsgirls/workbook
+env:
+  global:
+    secure: W8dMOTLvgQkCc+B7tfuVSNPwiInJZSpy550tJmfDNdF52v6S3QapXVFdc8q8ngF/qL7hSnFesfm9aQxRZX+gKF/WedWO3jXsNKxguHg9XF1eJMSCEVu8rK2R0UjTKLrzbSNN9hEnqYqJKj5xHhjJwswk+3CpTa47EJbYUGiSquY=
