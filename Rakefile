@@ -34,7 +34,9 @@ namespace :build do
       content = File.read(path)
       content_type = MimeMagic.by_path(path)
 
-      image['src'] = "data://#{content_type};base64,#{Base64.encode64(content).chop}"
+      data = [content].flatten.pack('m').gsub("\n","")
+
+      image['src'] = "data:#{content_type};base64,#{data}"
     end
 
     File.open('build/workbook.html', 'w') do |file|
