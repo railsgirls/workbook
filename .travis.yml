@@ -1,4 +1,5 @@
 language: ruby
+cache: bundler
 deploy:
   provider: s3
   access_key_id: AKIAJT6ZPTRVSYJDVQTQ
