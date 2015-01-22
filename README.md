@@ -1,9 +1,8 @@
 # RailsGirls Workbook
 
-The goal is to create a html scaffold to edit the RailsGirls workbook that can be easily exported as a PDF to send of to printing shops. 
+[Download the latest PDF version of the Workbook](https://s3.eu-central-1.amazonaws.com/railsgirls-workbook/workbook.pdf)
 
-## Ideas
+## Todos
 
-1. Have the contents in Markdown, styled with CSS
-2. Use either Chrome or wkhtmltopdf to generate the PDF
-
+* Create basic CSS framework to style pages
+* Change build script to embed CSS and images before sending the document to DocRaptor
