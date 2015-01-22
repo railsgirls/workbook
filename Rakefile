@@ -17,7 +17,7 @@ namespace :build do
     DocRaptor.create(options) do |pdf, response|
       if response.success?
         File.open('build/workbook.pdf', 'w+b') do |file|
-          file.write(pdf)
+          file.write(pdf.read)
         end
 
         puts "Successfully generated the PDF!"
