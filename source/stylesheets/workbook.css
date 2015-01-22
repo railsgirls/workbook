@@ -26,6 +26,11 @@ body {
   padding: 2cm;
 }
 
+.page img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .page.front, .page.back {
   background: #bb2830;
   color: white;

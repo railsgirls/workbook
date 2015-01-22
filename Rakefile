@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'doc_raptor'
 require 'nokogiri'
+require 'mimemagic'
 
 namespace :build do
   task :setup do
@@ -12,6 +13,13 @@ namespace :build do
 
     document = Nokogiri::HTML(file)
 
+    # Check for the correct number of pages
+    number_of_pages = document.css('.page').count
+    if (number_of_pages % 4) > 0
+      puts "Number of pages must be a multiple of 4 for printing, but is #{number_of_pages}!"
+      exit 1
+    end
+
     # Embed stylesheets
     document.css('link[rel=stylesheet]').each do |link|
       style = Nokogiri::XML::Node.new('style', document)
@@ -19,10 +27,14 @@ namespace :build do
       link.replace(style)
     end
 
-    number_of_pages = document.css('.page').count
-    if (number_of_pages % 4) > 0
-      puts "Number of pages must be a multiple of 4 for printing, but is #{number_of_pages}!"
-      exit 1
+    # Embed images
+    document.css('img').each do |image|
+      path = "source/#{image['src']}"
+
+      content = File.read(path)
+      content_type = MimeMagic.by_path(path)
+
+      image['src'] = "data://#{content_type};base64,#{Base64.encode64(content).chop}"
     end
 
     File.open('build/workbook.html', 'w') do |file|
