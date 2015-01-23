@@ -53,7 +53,10 @@ namespace :build do
       document_content: File.read('build/index.html'),
       name: 'workbook.pdf',
       document_type: 'pdf',
-      test: true
+      test: true,
+      prince_options: {
+        css_dpi: 72
+      }
     }
 
     DocRaptor.create(options) do |pdf, response|

@@ -1,3 +1,5 @@
+@import 'reset';
+
 $red: #bb2830;
 $black: #1a1919;
 $grey: #e4e4e3;
@@ -37,6 +39,14 @@ textarea {
 
 h1, h2 {
   color: $red;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+h2 {
+  font-size: 14pt;
 }
 
 ul {
