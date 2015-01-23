@@ -4,12 +4,12 @@ require 'nokogiri'
 require 'mimemagic'
 
 namespace :build do
-  task :setup do
-    mkdir_p 'build'
+  task :compile do
+    sh 'middleman build'
   end
 
-  task html: [:setup] do
-    file = File.read('source/workbook.html')
+  task html: [:compile] do
+    file = File.read('build/index.html')
 
     document = Nokogiri::HTML(file)
 
@@ -23,13 +23,13 @@ namespace :build do
     # Embed stylesheets
     document.css('link[rel=stylesheet]').each do |link|
       style = Nokogiri::XML::Node.new('style', document)
-      style.content = File.read("source/#{link['href']}")
+      style.content = File.read("build/#{link['href']}")
       link.replace(style)
     end
 
     # Embed images
     document.css('img').each do |image|
-      path = "source/#{image['src']}"
+      path = "build/#{image['src']}"
 
       content = File.read(path)
       content_type = MimeMagic.by_path(path)
@@ -39,7 +39,7 @@ namespace :build do
       image['src'] = "data:#{content_type};base64,#{data}"
     end
 
-    File.open('build/workbook.html', 'w') do |file|
+    File.open('build/index.html', 'w') do |file|
       file.write(document.to_html)
     end
 
@@ -50,7 +50,7 @@ namespace :build do
     DocRaptor.api_key(ENV['DOCRAPTOR_API_KEY'])
 
     options = {
-      document_content: File.read('build/workbook.html'),
+      document_content: File.read('build/index.html'),
       name: 'workbook.pdf',
       document_type: 'pdf',
       test: true
