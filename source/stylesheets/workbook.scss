@@ -23,6 +23,43 @@ body {
   font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif
 }
 
+input, textarea {
+  background: $grey;
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 20pt;
+}
+
+textarea {
+  height: 3em;
+}
+
+h1, h2 {
+  color: $red;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin: 0.5em 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.frame {
+  border: 5pt $grey solid;
+  width: 100%;
+  height: 10em;
+}
+
 .page {
   box-sizing: border-box;
   page-break-before: always;
@@ -32,6 +69,7 @@ body {
   color: $black;
   background: white;
   padding: 2cm;
+  font-size: 10pt;
 
   img {
     max-width: 100%;
@@ -43,11 +81,6 @@ body {
     color: white;
     text-align: center;
     padding: 0;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
   }
 
   &.front {
@@ -76,16 +109,19 @@ body {
     h1 {
       font-size: 70pt;
       margin: 1.5cm 0 0 0;
+      color: inherit;
     }
   }
 
   &.back {
     font-weight: bold;
+    font-size: 12pt;
 
     h1 {
       font-size: 50pt;
       padding-top: 8cm;
       margin-top: 0;
+      color: inherit;
     }
 
     .copyright {
