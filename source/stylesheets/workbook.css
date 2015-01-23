@@ -17,11 +17,13 @@ body {
 }
 
 .page {
+  box-sizing: border-box;
   page-break-before: always;
 
   width: 100%;
   height: 100%;
   color: #1a1919;
+  background: #fff;
   padding: 2cm;
 }
 
@@ -35,7 +37,6 @@ body {
   color: white;
   text-align: center;
   padding: 0;
-  margin: 0;
 }
 
 .page.front a, .page.back a {
@@ -74,4 +75,17 @@ body {
 
 .page.empty {
   background: #e4e4e3;
+}
+
+@media screen {
+  body {
+    background: #ddd;
+  }
+
+  .page {
+    box-shadow: 0 0 0.5cm #999;
+    width: 148mm;
+    height: 210mm;
+    margin: 1cm auto;
+  }
 }
