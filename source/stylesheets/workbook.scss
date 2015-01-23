@@ -79,6 +79,20 @@ body {
     }
   }
 
+  &.back {
+    font-weight: bold;
+
+    h1 {
+      font-size: 50pt;
+      padding-top: 8cm;
+      margin-top: 0;
+    }
+
+    .copyright {
+      font-weight: normal;
+    }
+  }
+
   &.empty {
     background: $grey;
   }
