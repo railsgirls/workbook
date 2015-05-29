@@ -1,9 +1,11 @@
 # RailsGirls Workbook ![Travis CI](https://travis-ci.org/railsgirls/workbook.svg?branch=master)
 
-[Download the latest PDF version of the Workbook](https://s3.eu-central-1.amazonaws.com/railsgirls-workbook/workbook.pdf)
-
 These are the sources for the RailsGirls Workbook. It is build using HTML and CSS with the intention to make it easier to collaboratively edit its contents. 
 
+## Downloads
+
+* [Download finished PDF releases of the Workbook](https://github.com/railsgirls/workbook/releases)
+* [Download the development PDF version of the Workbook](https://s3.eu-central-1.amazonaws.com/railsgirls-workbook/workbook.pdf)
 
 ## How to contribute
 
