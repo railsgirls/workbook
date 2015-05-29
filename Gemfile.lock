@@ -140,3 +140,6 @@ DEPENDENCIES
   mimemagic (~> 0.2)
   nokogiri (~> 1.6)
   rake
+
+BUNDLED WITH
+   1.10.1

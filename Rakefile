@@ -5,7 +5,7 @@ require 'mimemagic'
 
 namespace :build do
   task :compile do
-    sh 'middleman build'
+    sh 'bundle exec middleman build'
   end
 
   task html: [:compile] do
@@ -74,6 +74,15 @@ namespace :build do
       end
     end
   end
+end
+
+task :preview do
+  sh 'bundle exec middleman server'
+end
+
+task :setup do
+  sh 'gem install bundler'
+  sh 'bundle'
 end
 
 task default: 'build:pdf'
