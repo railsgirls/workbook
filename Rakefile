@@ -57,7 +57,6 @@ namespace :build do
       document_type: 'pdf',
       test: true,
       prince_options: {
-        css_dpi: 72
       }
     }
 
