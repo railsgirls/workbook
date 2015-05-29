@@ -66,6 +66,12 @@ namespace :build do
         File.open("build/#{filename}", 'w+b') { |file| file.write(pdf.read) }
 
         puts "Successfully generated the PDF (#{filename})!"
+
+        if ENV['TRAVIS']
+          puts "After this build finished, the PDF will be available at"
+          puts "https://s3.eu-central-1.amazonaws.com/railsgirls-workbook/#{filename}"
+        end
+
         exit 0
       else
         puts "Failed to generate PDF: "
