@@ -62,7 +62,7 @@ namespace :build do
 
     DocRaptor.create(options) do |pdf, response|
       if response.success?
-        filename = ENV['TRAVIS_BRANCH'] != 'master' ? "workbook-#{ENV['TRAVIS_COMMIT']}.pdf" : 'workbook.pdf'
+        filename = (ENV['TRAVIS_BRANCH'] && ENV['TRAVIS_BRANCH'] != 'master') ? "workbook-#{ENV['TRAVIS_COMMIT']}.pdf" : 'workbook.pdf'
         File.open("build/#{filename}", 'w+b') { |file| file.write(pdf.read) }
 
         puts "Successfully generated the PDF (#{filename})!"
