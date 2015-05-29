@@ -22,7 +22,7 @@ body {
   padding: 0;
   margin: 0;
 
-  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif
+  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
 input, textarea {
@@ -43,10 +43,15 @@ h1, h2 {
 
 h1 {
   font-size: 30pt;
+  line-height: 1.1em;;
 }
 
 h2 {
   font-size: 14pt;
+}
+
+p {
+  margin: 1em 0;
 }
 
 ul {
@@ -65,21 +70,36 @@ a {
 }
 
 .frame {
-  border: 5pt $grey solid;
+  border: 3pt $grey solid;
   width: 100%;
   height: 10em;
+}
+
+figcaption {
+  font-size: 10pt;
+  font-style: italic;
 }
 
 .page {
   box-sizing: border-box;
   page-break-before: always;
 
+  position: relative;
+
   width: 100%;
   height: 100%;
   color: $black;
   background: white;
-  padding: 2cm;
   font-size: 10pt;
+  line-height: 1.2em;
+
+  &:nth-child(odd) {
+    padding: 2cm 2cm 2cm 3cm;
+  }
+
+  &:nth-child(even) {
+    padding: 2cm 3cm 2cm 2cm;
+  }
 
   img {
     max-width: 100%;
@@ -141,6 +161,11 @@ a {
 
   &.empty {
     background: $grey;
+  }
+
+  &.motivational {
+    font-size: 16pt;
+    padding-top: 6cm;
   }
 }
 
