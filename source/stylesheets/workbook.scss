@@ -9,11 +9,12 @@ $page-height: 210mm;
 
 @page {
   margin: 0;
-  size: $page-width $page-height;
+  size: A5;
 }
 
 @page horizontal {
-  size: $page-height $page-width;
+  margin: 0;
+  size: A5 landscape;
 }
 
 body, html {
