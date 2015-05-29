@@ -1,7 +1,4 @@
 require 'rubygems'
-require 'doc_raptor'
-require 'nokogiri'
-require 'mimemagic'
 
 namespace :build do
   task :compile do
@@ -9,6 +6,9 @@ namespace :build do
   end
 
   task html: [:compile] do
+    require 'nokogiri'
+    require 'mimemagic'
+
     file = File.read('build/index.html')
 
     document = Nokogiri::HTML(file)
@@ -47,6 +47,8 @@ namespace :build do
   end
 
   task pdf: [:html] do
+    require 'doc_raptor'
+
     DocRaptor.api_key(ENV['DOCRAPTOR_API_KEY'])
 
     options = {
