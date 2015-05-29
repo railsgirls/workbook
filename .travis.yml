@@ -1,17 +1,25 @@
 language: ruby
 cache: bundler
 deploy:
-  provider: s3
-  access_key_id: AKIAJT6ZPTRVSYJDVQTQ
-  secret_access_key:
-    secure: gMBpJi7JtUSost3W7kTO5jEYStqZhRuUsl/7uSwPCr9h4DICakoSx3wfdEhDNzrK9JafWxCZR2gk7NiyeG348Tgu5ZZq/ESxsfJgdV82ylXq941ncigBoaeg31vL1It9bMbcfPfQ+HnH2sHHb5fqq4wFz6cSkOVijG2GpnXIvCI=
-  bucket: railsgirls-workbook
-  local-dir: build
-  skip_cleanup: true
-  region: eu-central-1
-  acl: public_read
-  on:
-    repo: railsgirls/workbook
+  - provider: s3
+    access_key_id: AKIAJT6ZPTRVSYJDVQTQ
+    secret_access_key:
+      secure: gMBpJi7JtUSost3W7kTO5jEYStqZhRuUsl/7uSwPCr9h4DICakoSx3wfdEhDNzrK9JafWxCZR2gk7NiyeG348Tgu5ZZq/ESxsfJgdV82ylXq941ncigBoaeg31vL1It9bMbcfPfQ+HnH2sHHb5fqq4wFz6cSkOVijG2GpnXIvCI=
+    bucket: railsgirls-workbook
+    local-dir: build
+    skip_cleanup: true
+    region: eu-central-1
+    acl: public_read
+    on:
+      repo: railsgirls/workbook
+      all_branches: true
+  - provider: releases
+    api_key:
+      secure: AnnFIdic2VDtvpsGsEUVuEgWutV0hNc9QNdc4gV3bVUeI2dMMK3Q55VvG5GSNXNshhUkk7JAij6BV5oJ9y9O4HUNs2EgdUXH4+V7r2YZImOz0tmq2brcoAVt7yRaaghJZQuaHFZoAWwx+BbvAzGhtiUb+VfS8TIBrGueXlkacVU=
+    file: build/workbook.pdf
+    on:
+      repo: railsgirls/workbook
+      tags: true
 env:
   global:
     secure: W8dMOTLvgQkCc+B7tfuVSNPwiInJZSpy550tJmfDNdF52v6S3QapXVFdc8q8ngF/qL7hSnFesfm9aQxRZX+gKF/WedWO3jXsNKxguHg9XF1eJMSCEVu8rK2R0UjTKLrzbSNN9hEnqYqJKj5xHhjJwswk+3CpTa47EJbYUGiSquY=
