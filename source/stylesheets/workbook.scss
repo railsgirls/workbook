@@ -37,6 +37,11 @@ textarea {
   height: 3em;
 }
 
+blockquote {
+  margin: 0 0 1em 0;
+  font-style: italic;
+}
+
 h1, h2 {
   color: $red;
   margin-bottom: .5em
