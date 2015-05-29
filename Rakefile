@@ -55,7 +55,7 @@ namespace :build do
       document_content: File.read('build/index.html'),
       name: 'workbook.pdf',
       document_type: 'pdf',
-      test: true,
+      test: ENV['TRAVIS_TAG'] == '',
       prince_options: {
       }
     }
