@@ -12,6 +12,10 @@ $page-height: 210mm;
   size: $page-width $page-height;
 }
 
+@page horizontal {
+  size: $page-height $page-width;
+}
+
 body, html {
   width: 100%;
   height: 100%;
@@ -120,6 +124,18 @@ figcaption {
     padding: 2cm 3cm 2cm 2cm;
   }
 
+  &.horizontal {
+    page: horizontal;
+
+    &:nth-child(odd) {
+      padding: 3cm 2cm 2cm 2cm;
+    }
+
+    &:nth-child(even) {
+      padding: 2cm 2cm 3cm 2cm;
+    }
+  }
+
   img {
     max-width: 100%;
     max-height: 100%;
@@ -188,6 +204,81 @@ figcaption {
   }
 }
 
+#bentobox {
+  position: relative;
+
+  h2 {
+    margin: 0 0 .3em 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  input {
+    width: 3cm;
+    background: white;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .meta {
+    position: absolute;
+    top: 2cm;
+    left: 2cm;
+
+    * {
+      display: inline-block;
+      margin: 0;
+      vertical-align: baseline;
+    }
+
+    h1 {
+      margin: 0 1em 0 0;
+    }
+  }
+
+  img {
+    margin-top: 1cm;
+  }
+
+  .compartment {
+    position: absolute;
+    z-index: 10;
+    overflow: hidden;
+
+    &.top-left {
+      top: 4.75cm;
+      left: 2.8cm;
+      width: 5cm;
+      height: 3.5cm;
+    }
+
+    &.top-right {
+      top: 4.75cm;
+      left: 8.75cm;
+      width: 9.2cm;
+      height: 1.8cm;
+    }
+
+    &.bottom-left {
+      top: 9.3cm;
+      left: 2.8cm;
+      width: 5cm;
+      height: 2.2cm;
+    }
+
+    &.bottom-right {
+      top: 7.3cm;
+      left: 8.75cm;
+      width: 9.2cm;
+      height: 1.8cm;
+    }
+  }
+}
+
 @media screen {
   body {
     background: #ddd;
@@ -198,5 +289,10 @@ figcaption {
     width: $page-width;
     height: $page-height;
     margin: 1cm auto;
+
+    &.horizontal {
+      height: $page-width;
+      width: $page-height;
+    }
   }
 }
