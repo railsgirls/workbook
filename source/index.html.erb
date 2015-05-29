@@ -95,23 +95,37 @@
   <div class="page">
     <h1>Checklist for your web project</h1>
 
-    <label>What is the core idea for the project:</label>
-    <input type="text" />
+    <ul>
+      <li>
+        <label>What is the core idea for the project:</label>
+        <input type="text" />
+      </li>
 
-    <label>Decide until when you will finish the first version:</label>
-    <input type="text" />
+      <li>
+        <label>Decide until when you will finish the first version:</label>
+        <input type="text" />
+      </li>
 
-    <label>What’s the unique content you’re showing?</label>
-    <input type="text" />
+      <li>
+        <label>What’s the unique content you’re showing?</label>
+        <input type="text" />
+      </li>
 
-    <label>What problem will you try to solving?</label>
-    <textarea></textarea>
+      <li>
+        <label>What problem will you try to solving?</label>
+        <textarea></textarea>
+      </li>
 
-    <label>Who will be the visitor/customer of your web project?</label>
-    <textarea></textarea>
+      <li>
+        <label>Who will be the visitor/customer of your web project?</label>
+        <textarea></textarea>
+      </li>
 
-    <label>What is your most important goal with your project?</label>
-    <textarea></textarea>
+      <li>
+        <label>What is your most important goal with your project?</label>
+        <textarea></textarea>
+      </li>
+    </ul>
   </div>
 
   <div class="page motivational">
@@ -129,28 +143,31 @@
     <h1>Cheatsheet for your app</h1>
     <ul>
       <li>
-        Your Ruby on Rails app can be found at:
-        projects/railsgirls
+        Your Ruby on Rails app can be found at:<br />
+        <code>projects/railsgirls</code>
       <li>
       <li>
-        You can start your app by opening Terminal and:
-        cd projects/railsgirls rails s
+        You can start your app by opening Terminal and:<br />
+        <code>cd projects/railsgirls rails s</code>
       </li>
       <li>
-        Access the app:
-        Open http://localhost:3000 on your web browser
+        Access the app:<br />
+        Open <code>http://localhost:3000</code> on your web browser
       </li>
       <li>
-        Most of the time you edit the files at app/ directory
-        app/views/ (the user interfaces of your app)
-        app/models/ (models define app information structure)
-        app/controllers/ (are the glue between models and views)
+        Most of the time you edit the files at <code>app/</code> directory<br />
+        <code>app/views/</code> (the user interfaces of your app)<br />
+        <code>app/models/</code> (models define app information structure)<br />
+        <code>app/controllers/</code> (are the glue between models and views)
       </li>
       <li>
         Tools we use
-        Bootstrap (to style the app)
-        Sublime/Komodo/Vim (to edit the code files) <a href="http://goo.gl/IKh1">http://goo.gl/IKh1</a>
-        Heroku (to host the application) <a href="http://heroku.com">http://heroku.com</a>
+
+        <ul>
+          <li>Bootstrap (to style the app)</li>
+          <li>Sublime/Komodo/Vim (to edit the code files) <a href="http://goo.gl/IKh1">http://goo.gl/IKh1</a></li>
+          <li>Heroku (to host the application) <a href="http://heroku.com">http://heroku.com</a></li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -159,39 +176,39 @@
     <h1>Getting further</h1>
     <ul>
       <li>
-        Rails Girls Guides
+        <h3>Rails Girls Guides</h3>
         <a href="http://guides.railsgirls.com">http://guides.railsgirls.com</a>
-        Everything you need to build your first app.
+        <p>Everything you need to build your first app.</p>
       </li>
       <li>
-        Try Ruby
+        <h3>Try Ruby</h3>
         <a href="http://www.tryruby.org">http://www.tryruby.org</a>
-        Programming Ruby in your browser.
+        <p>Programming Ruby in your browser.</p>
       </li>
       <li>
-        Codeschool
+        <h3>CodeSchool</h3>
         <a href="http://www.codeschool.com">http://www.codeschool.com</a>
-        Try out the Rails for Zombies module: a free, browser-based Rails workshop. Other classes interesting too!
+        <p>Try out the Rails for Zombies module: a free, browser-based Rails workshop. Other classes interesting too!</p>
       </li>
       <li>
-        Codecademy
+        <h3>Codecademy</h3>
         <a href="http://www.codeacademy.com">http://www.codecademy.com</a>
-        A Y-Combinator startup aiming to teach the world to code.
+        <p>A Y-Combinator startup aiming to teach the world to code.</p>
       </li>
       <li>
-        Don’t fear the Internet
+        <h3>Don’t fear the Internet</h3>
         <a href="http://www.dontfeartheinternet.com">http://www.dontfeartheinternet.com/</a>
-        Frontend stuff (CSS & HTML) explained through short videos.
+        <p>Frontend stuff (CSS & HTML) explained through short videos.</p>
       </li>
       <li>
-        A Quick (and Hopefully Painless) Ride Through Ruby (with Cartoon Foxes)
+        <h3>A Quick (and Hopefully Painless) Ride Through Ruby (with Cartoon Foxes)</h3>
         <a href="http://mislav.uniqpath.com/poignant-guide/book/chapter-3.html">http://mislav.uniqpath.com/poignant-guide/book/chapter-3.html</a>
-        The legendary Why’s Poignant Guide to Ruby: part comic book, part coding exercise.
+        <p>The legendary Why’s Poignant Guide to Ruby: part comic book, part coding exercise.</p>
       </li>
       <li>
-        RailsGuides
+        <h3>RailsGuides</h3>
         <a href="http://guides.rubyonrails.org/">http://guides.rubyonrails.org/</a>
-        Tutorials and guides created by the Rails community
+        <p>Tutorials and guides created by the Rails community</p>
       </li>
     </ul>
   </div>
@@ -260,21 +277,20 @@
 
   <div class="page">
     <h1>My first investor deck</h1>
-    The Team
-    Draw your team. What makes you special? Why are you going to succeed?
+    <h3>The Team</h3>
+    <p>Draw your team. What makes you special? Why are you going to succeed?</p>
 
-    Problem
-    Draw here your problem - how it exists today? How come it’s a problem?
+    <h3>Problem</h3>
+    <p>Draw here your problem - how it exists today? How come it’s a problem?</p>
 
-    Solution
-    Draw here your solution. Make it tangible, real and descriptive.
+    <h3>Solution</h3>
+    <p>Draw here your solution. Make it tangible, real and descriptive.</p>
 
-    Revenue and Competition
-    Who’s paying what? What are they paying for? Who are your competitors?
+    <h3>Revenue and Competition</h3>
+    <p>Who’s paying what? What are they paying for? Who are your competitors?</p>
 
-    The Magic
-    What does the future look for
-    you? What is your vision? What is your mission?
+    <h3>The Magic</h3>
+    <p>What does the future look for you? What is your vision? What is your mission?</p>
   </div>
 
   <div class="page back">
