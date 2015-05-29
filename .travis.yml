@@ -17,6 +17,7 @@ deploy:
     api_key:
       secure: AnnFIdic2VDtvpsGsEUVuEgWutV0hNc9QNdc4gV3bVUeI2dMMK3Q55VvG5GSNXNshhUkk7JAij6BV5oJ9y9O4HUNs2EgdUXH4+V7r2YZImOz0tmq2brcoAVt7yRaaghJZQuaHFZoAWwx+BbvAzGhtiUb+VfS8TIBrGueXlkacVU=
     file: build/workbook.pdf
+    skip_cleanup: true
     on:
       repo: railsgirls/workbook
       tags: true
