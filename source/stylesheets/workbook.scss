@@ -12,8 +12,15 @@ $page-height: 210mm;
   size: A5;
 }
 
+@page cover {
+  background: $red;
+}
+
+@page empty {
+  background: $grey;
+}
+
 @page horizontal {
-  margin: 0;
   size: A5 landscape;
 }
 
@@ -150,6 +157,7 @@ figcaption {
   }
 
   &.front {
+    page: cover;
     font-weight: bold;
     font-size: 12pt;
 
@@ -180,6 +188,7 @@ figcaption {
   }
 
   &.back {
+    page: cover;
     font-weight: bold;
     font-size: 12pt;
 
@@ -196,6 +205,7 @@ figcaption {
   }
 
   &.empty {
+    page: empty;
     background: $grey;
   }
 
