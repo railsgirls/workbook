@@ -34,7 +34,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.4)
     execjs (2.2.2)
-    ffi (1.9.6)
+    ffi (1.15.5)
     haml (4.0.6)
       tilt
     hike (1.2.3)
