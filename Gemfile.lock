@@ -33,7 +33,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.0.4)
-    execjs (2.2.2)
+    execjs (2.8.1)
     ffi (1.15.5)
     haml (5.2.2)
       temple (>= 0.8.0)
@@ -133,7 +133,7 @@ GEM
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uber (0.0.12)
-    uglifier (2.7.0)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
